@@ -3,7 +3,7 @@ services:
   letsencrypt:
     container_name: 'certbot-service'
     image: certbot/certbot:arm64v8-v1.29.0
-    command: sh -c "certbot certonly --webroot -w /tmp/acme_challenge -d www.wzane.com --text --agree-tos --email parazane@gemail.com --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
+    command: sh -c "certbot certonly --webroot -w /tmp/acme_challenge -d www.wzane.com --text --agree-tos --email your@email.com --rsa-key-size 4096 --verbose --keep-until-expiring --preferred-challenges=http"
     entrypoint: ""
     volumes:
       - "/etc/letsencrypt:/etc/letsencrypt"
